@@ -49,9 +49,9 @@ public class JonesMageeT_P1
 		// (3) Input 2 integers and 1 double (including declare variables)  and 1 String
       //     Note that you must add _XXX, where XXX are your initials (first, middle, last) 
       //     at the end of each variable
-               int a_TJM, b_TJM, result1, result2;
-               double r_TJM, result3, result4;
-               String name;
+               int a_TJM, b_TJM, result1, result2; // variables
+               double r_TJM, result3, result4; // doubles
+               String name;   
                
 
 		
@@ -63,7 +63,7 @@ public class JonesMageeT_P1
 
 
 		
-		// (5) Output results by [[YOUR FULL NAME]] 
+		// (5) Output results by [[Tyree Jones-Magee]] 
 		
 
 
