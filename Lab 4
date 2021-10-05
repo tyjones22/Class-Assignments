@@ -1,0 +1,85 @@
+/*
+Tyree Jones-Magee
+2282562095
+Dr.Boonthum
+09/28/2021
+CSC151 Lab 4
+Review Uesr Input and Calculation
+*/
+import java.util.Scanner;
+public class JonesMagee_Lab4
+   {
+      public static void main(String []args)
+         {
+//Part A 
+
+            Scanner keyboard= new Scanner(System.in);
+            double d1, d2, d3, sum, average;
+            System.out.println("Please input a number for d1:");
+            d1= keyboard.nextInt();
+            System.out.println("Please input a number for d2:");
+            d2= keyboard.nextInt();
+            System.out.println("Please input a number for d3:");
+            d3= keyboard.nextDouble();
+            
+            sum= d1+d2+d3;
+            average= sum/3;
+            
+            System.out.println("You entered these 3 numbers: "+d1+", "+d2+", "+d3+".");
+            System.out.println("\tThe Sum of these values is "+sum);
+            System.out.println("\tThe average of these values is "+average);
+            System.out.println("\n\n");    
+//Part B
+            int dividend, divisor, quotient, remainder;
+            
+            System.out.println("Please input a number for the dividend:");
+            dividend = keyboard.nextInt();
+            
+            System.out.println("Please input a number for the divisor:");
+            divisor = keyboard.nextInt();
+            
+            quotient = dividend/divisor;
+            remainder= dividend%divisor; 
+             
+            System.out.println("When "+dividend+" is divided by "+ divisor+", "+
+                              "\n\tthe quotient is "+quotient+" and "+
+                              "\n\tthe remainder is "+remainder+".");
+                              System.out.println("\n\n");    
+//Part C
+            double a,b,c,mystery;
+            System.out.println("Please input side a"); 
+            a = keyboard.nextDouble();  
+            System.out.println("Please input side b"); 
+            b = keyboard.nextDouble();
+            c = Math.sqrt((Math.pow(a,2)+Math.pow(b,2)));  
+            
+            System.out.println("\n");    
+            System.out.println("If the right triangle has one side "+a+" and another side "+b+", "+
+                               "\n\tthe side opposite the right angle will be "+c+"."); 
+                               System.out.println("\n");   
+                               
+            System.out.println("\n\n");                   
+            mystery = ((2*a+13)/5)+((3*Math.pow(b,5)-7)/15);
+            System.out.println("Mystery value is "+mystery);                    
+//Part D
+            System.out.println("\n\n");  
+            String myQuote;
+            System.out.println("Please input your favorite quote:");    
+            keyboard.nextLine();
+            myQuote = keyboard.nextLine();     
+            
+            int size;
+            size = myQuote.length(); 
+            String upper; 
+            upper = myQuote.toUpperCase();  
+            char firstChar;
+            firstChar = myQuote.charAt(0);
+          
+           System.out.println("My favorite quote in all uppercase: "+upper+
+                              "\n\tThis quote contains "+size+" charachters in it"+
+                              "\n\tand the first character is "+firstChar+".");
+
+          
+           
+          }
+   }
