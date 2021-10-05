@@ -1,0 +1,123 @@
+/*
+Tyree Jones-Magee
+2282562095
+Dr. Boonthum
+CSC 151 Lab 5 
+10/5/2021
+Basic Conditioning statement, and review chapter 2
+*/
+import java.util.Scanner;
+public class JonesMageeT_Lab5 {
+   public static void main (String []args){
+// Part A- A guessing Game with if statements
+      int myNUMBER=  8, guessNumber;
+      Scanner k = new Scanner (System.in);
+      System.out.println("Input  a number ");
+      guessNumber = k.nextInt();
+      
+      if ( myNUMBER == guessNumber)
+         { System.out.println("Good guess, "+myNUMBER+" is my favorite number.");}
+    
+      
+// Part B - two numbers , higher or lower
+      System.out.println("\n\n");
+      int num1, num2;
+     System.out.println("Input  a number for num1");
+      num1 = k.nextInt();
+      System.out.println("Input  a number for num2");
+      num2 = k.nextInt();
+      
+        if ( num1 > num2)
+         { System.out.println("Based on user input ("+num1+" and "+num2+" ), num1 is higher than num2.");}
+      else if (num1 < num2)
+         {System.out.println("Based on user input ("+num1+" and "+num2+" ), num1 is lower than num2.");}
+      else if (num1 == num2)
+         {System.out.println("Based on user input ("+num1+" and "+num2+" ), num1 is equal to num2.");}
+         
+// Part C-  read scores get avergae
+      System.out.println("\n\n");        
+      int num3, num4, num5;
+      double average;
+      System.out.println("Input  a number for num1");
+      num1 = k.nextInt();
+      System.out.println("Input  a number for num2");
+      num2 = k.nextInt();
+       System.out.println("Input  a number for num3");
+      num3 = k.nextInt();
+      System.out.println("Input  a number for num4");
+      num4 = k.nextInt();
+       System.out.println("Input  a number for num5");
+      num5 = k.nextInt();
+      
+      average=(double) (num1+num2+num3+num4+num5)/5;
+     
+     System.out.println("\n\n");    
+      if ( average >= 80)
+        System.out.println("Your score of "+average+" is amamzing!");
+      else
+         System.out.println("You need to improve a little bit more!"); 
+// Part D-  read input and calculation
+      int a,b;
+      double r;
+      
+      System.out.println("Input  a integer for a");
+      a= k.nextInt();
+      System.out.println("Input  a integer for b");
+      b = k.nextInt();
+      System.out.println("Input  a decimal number for r");
+      r = k.nextDouble();
+      
+      int result1;
+      double result2, result3;
+      
+      result1 = (int) (Math.pow(a,9))+7*9-(int)(Math.sqrt(a));
+      result2= (((3*(double)a)+7)/5)+(((2*(double)b)-9)/7);
+      result3= ((4*Math.pow(r,9))+(3*(double)a)-(2*(double)b))/7;
+      
+      System.out.println(" You entered: a = "+a+", b = "+b+", r = "+r+"."+
+                         "\n\tresult1 is "+result1+"."+
+                         "\n\tresult2 is "+result2+"."+
+                         "\n\tresult3 is "+result3+".");
+//Part E - string input and manipulation
+         
+       String firstName, lastName, hometown, upper, lower;
+       int age, size;
+       char firstLetter, lastLetter;                        
+       k.nextLine();
+       System.out.println("\n\n");
+      
+      System.out.println("What is your first name?");
+      firstName = k.nextLine();
+      System.out.println("What is your last name?");
+      lastName = k.nextLine();
+      System.out.println("What is your age?");
+      age = k.nextInt(); k.nextLine();
+      System.out.println("What is your hometown?");
+      hometown = k.nextLine();
+      
+      System.out.println("\n\n");
+      
+      System.out.println("Hello, my name is "+firstName+" "+lastName+", and I am "+age+" years old"+
+                           "\n\tfrom "+hometown+".");
+                       
+      System.out.println("\n\n");
+      size = firstName.length()+lastName.length();
+      upper = firstName.toUpperCase()+" "+lastName.toUpperCase();
+      lower = hometown.toLowerCase();
+      firstLetter = hometown.charAt(0);
+      lastLetter= firstName.charAt(firstName.length()-1);
+      
+      System.out.println("My Name is "+ firstName+" "+lastName+", and it has a total of "+
+                         size+" characters."+"\nUPPERCASE of my full name is "+upper+"."+
+                         "\nlowercase of my hometown is "+lower+"."+
+                         "\n\tThe first character of my hometown is "+firstLetter+"."+
+                         "\n\tThe last character of my first name is "+lastLetter+".");  
+                         
+       System.out.println("\n\n");
+       if (size >= 10)
+         { System.out.println("Your full name, "+upper+", has at least 10 characters.");}
+       else
+        { System.out.println("Your full name, "+upper+", has less than 10 characters.");}                    
+          
+   }
+}      
