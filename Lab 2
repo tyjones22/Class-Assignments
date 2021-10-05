@@ -1,0 +1,62 @@
+// Tyree Jones-Magee
+//Dr.Boonthum
+//section: 63
+//Program 2
+//09/14/2021
+//CSC 151-02
+// Variables and Arthmetic Operators
+public class JonesMageeT_Lab2
+{
+   public static void main(String []args)
+   {
+   // Part A- Variable and String Literals
+      String firstName = "Tyree";
+      String lastName = "Jones-Magee";
+      String major = " Computer Science";
+      String hometown = "Gulfport";
+      String state = "Mississippi";
+      System.out.println("Lab 2: 9/14/2021");
+      System.out.println("Hello, My name is "+firstName+" "+
+         lastName+".");
+      System.out.println("I am from "+hometown+","+state+".");
+      System.out.println("I am attending Hampton University and majoring in "+major+".");
+    
+   // Part B
+      int num1, num2, num3, sum , average;
+      num1=642; // last 3 of my student number
+      num2=8; // fav number
+      num3=22; // number 20-40
+      sum= num1 + num2 +num3;
+      average= sum / 3;
+      System.out.println("Integers are "+num1+", "+num2+", "+num3+".");
+      System.out.print("\tSum of these integers is "+sum+".\n");
+      System.out.print("\tAverage of these integers is "+average+".\n");
+   // Part C
+      boolean flag = false;
+      char myChar, myLetter;
+      myChar= 'T'; myLetter=74;// myChar = first initial of my first name... myLetter= first letter of my first last name 
+      System.out.println("The Flag is "+flag+".");
+      System.out.println("The first character of my first name is "+myChar+".");
+      System.out.println("The first character of my first last name is "+myLetter+".");
+   // Part D
+      double SALE_TAX_RATE=.075;
+      double total, cost, tax;
+      cost =400;
+      tax=cost*SALE_TAX_RATE;
+      total=cost+tax;
+      System.out.println("Basic Tax Calculation:");
+      System.out.println("\tThe sales tax on "+cost+", with "+SALE_TAX_RATE*100+"% is "+tax+".");
+      System.out.println("\tThat makes the overall total cost come to "+total+".");
+   //Part E
+      int dividend, divisor, quotient, remainder;
+      dividend = 15;
+       divisor =  4;
+       quotient= dividend/ divisor;
+       remainder=(dividend%divisor);
+       System.out.println("When "+dividend+" is divided by "+divisor+",");
+       System.out.println("\tthe quotient is "+quotient+" and");
+       System.out.println("\tthe remainder is "+remainder+".");
+      
+   
+   }// end main method
+}//end java program
