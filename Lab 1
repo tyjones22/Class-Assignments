@@ -1,0 +1,52 @@
+// Tyree Jones-Magee
+//Program 1
+//09/07/2021
+//CSC 151-02
+//Dr.boonthum
+//Learn to Write a Java Program
+public class JonesMageeT_Lab1
+{
+   public static void main(String []args)
+   {
+// Part A
+   System.out.println("Name: Tyree Jones-Magee\n"+
+   "Major: Computer Science\n"+
+   "Favorite Song: History Hates Lovers");
+   System.out.println("Favorite Movie: Hidden Figures");
+   System.out.println("\n ");
+// Part B
+   String firstName= "Tyree";
+   String lastName= "Jones-Magee";
+   String major= "Computer Science";
+   System.out.println("Hello, my name is "+firstName+
+   " "+lastName+" and my major is "+major+ ".");
+    System.out.println("\n ");
+// Part C
+   int num1=8, num2=22;
+   int sum = num1+num2;
+   System.out.print("The sum of "+num1+" and "+num2+" is "+sum+".");
+    System.out.println("\n ");
+// Part D
+   double d1=8, d2=22, d3=2003, d4=3, d5=19;
+   double Sum = d1+d2+d3+d4+d5, average= Sum/5;
+   System.out.println("\nThe values are "+d1+", "+d2+", "+d3+", "+d4+", "+d5);
+   System.out.println("\tSum of these values is "+Sum+".");
+   System.out.println("\tAverage of the values is "+average+".");
+    System.out.println("\n ");
+// Bonus 1 (#3)
+   System.out.println("1. My name is Tyree Jones-Magee.\n"+
+   "2. My address is 15090 Loveless Dr. 39503 Gulfport, Ms.\n"+
+   "3. My Telephone number is (228)256-2095.\n"+
+   "4. My college major is Computer Science.");
+    System.out.println("\n ");
+// Bonus 2 (#4)
+    System.out.println("    *    \n"+
+    "   ***   \n"+
+    "  *****  \n"+
+    " ******* \n"+
+    "  *****  \n"+
+    "   ***   \n"+
+    "    *    ");
+
+   }// end main method
+}//end java program
