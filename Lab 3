@@ -1,0 +1,131 @@
+// Tyree Jones-Magee
+//2282562095
+// Dr.Boonthum
+//CSC 151 Lab 3
+// User Input, Calculation, String Manipuation
+import java.util.*;
+public class JonesMagee_TLab3
+{
+   public static void main(String []args)
+      {
+         Scanner Keyboard = new Scanner(System.in);
+ // Part A
+         System.out.println("Type your name"); // ask name
+         String name = Keyboard.nextLine();
+         
+          System.out.println("Name is "+name);
+//a
+          int age;         
+          System.out.println("Type your age"); // ask age
+          age = Keyboard.nextInt();
+          
+          System.out.println("Age is "+age);
+//a
+          double gpa;         
+          System.out.println("Type your gpa"); // ask gpa
+          gpa = Keyboard.nextDouble();
+          System.out.println("Gpa is "+gpa);
+          
+          Keyboard.nextLine(); // clear buffer
+          System.out.println("Type your major"); // ask major 
+          String major = Keyboard.nextLine();
+          
+          System.out.println("Major is "+ major);
+          
+          System.out.println("\n");
+          System.out.println("Name is "+ name+".");
+          System.out.println("Age is "+ age+".");
+          System.out.println("Gpa is "+ gpa+".");
+          System.out.println("Major is "+ major+".");
+          
+// Part B
+          int size;
+          size = name.length(); 
+          String upper,lower; 
+          upper = name.toUpperCase(); 
+          lower = name.toLowerCase(); 
+          char firstLetter, lastLetter;
+          firstLetter = name.charAt(0);
+          lastLetter = name.charAt(name.length()-1);   
+          
+          System.out.println("\n");
+          System.out.println("Name is "+upper+".");  
+          System.out.println("Name is "+lower+".");
+          System.out.println("Name is "+name+", has "+size+" characters. "); 
+          System.out.println("UPPERCASE of name is "+upper+"."); 
+          System.out.println("lowecase of name is "+lower+"."); 
+          System.out.println("The first character of name is "+firstLetter+"."); 
+          System.out.println("The last character of name is "+lastLetter+".");
+          
+
+//Part C          
+          System.out.println("\n");
+          double myAnswer1, myAnswer2, myAnswer3; 
+          myAnswer1= Math.pow(6,8); // exponent 6 to the 8th power
+          System.out.println("The answer is "+myAnswer1+".");
+          
+          myAnswer2= Math.sqrt(256); // square root
+          System.out.println("The answer is "+myAnswer2+".");
+          
+          myAnswer3= (Math.sqrt(2*(Math.pow(age,5))+size))/5; // formula
+          System.out.println("The answer is "+myAnswer3+".");
+           // exponent then mulltiplication then addidtion then square root then /5
+           
+           
+// Part D           
+           byte vByte;
+           short vShort;
+           int vInt;
+           long vLong;
+           float vFloat;
+           double vDouble;
+           
+           vByte=123;
+           vShort= vByte;
+           vInt= vShort;
+           vLong=vInt;
+           vFloat=vLong;
+           vDouble=vFloat;
+           
+           
+           System.out.println("\n");
+           System.out.println(" Widening through assignment statment");
+           System.out.println("\tbyte = "+vByte);
+           System.out.println("\tshort = "+vShort);
+           System.out.println("\tint = "+vInt);
+           System.out.println("\tlong = "+vLong);
+           System.out.println("\tfloat = "+vFloat);
+           System.out.println("\tdouble = "+vDouble);
+           
+           
+           vDouble = 123.456;
+           vFloat= (float) vDouble;
+           vLong= (long) vFloat;
+           vInt= (int) vLong;
+           vShort= (short) vInt;
+           vByte= (byte) vShort;
+           
+           System.out.println("\n");
+           System.out.println(" Narrowing through Casting");
+           System.out.println("\tdouble = "+vDouble);
+           System.out.println("\tfloat = "+vFloat);
+           System.out.println("\tlong = "+vLong);
+           System.out.println("\tint = "+vInt);
+           System.out.println("\tshort = "+vShort);
+           System.out.println("\tbyte = "+vByte);
+           
+           
+          
+// Bonus
+
+           System.out.println("\n");
+           System.out.println("Land Calculation");
+           int acre= 43560;
+           int feet = 389767;
+           int  number_of_acre = feet/acre;
+           System.out.println("\t"+number_of_acre);          
+          
+
+         
+      }
+}      
