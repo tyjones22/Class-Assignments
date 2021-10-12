@@ -1,0 +1,125 @@
+/*
+Tyree Jones-Magee
+2282562095
+tyree.jonesmagee@my.hamptonu.edu
+Dr.Boothum
+Midterm
+10/12/2021
+I, Tyree Jones-Magee, pledge to follow the Honor Code in taking my Lab Midterm Exam.
+*/
+import java.util.*;
+public class JonesMageeT_LabMidterm {
+   public static void main(String []args){
+   
+   Scanner k = new Scanner(System.in);
+
+// Part A-  Read Input
+      
+      int a,b,c;
+      double m,n;
+      
+      System.out.println("Enter integer a");
+      a = k.nextInt();
+      
+      System.out.println("Enter integer b");
+      b = k.nextInt();
+
+      System.out.println("Enter integer c");
+      c = k.nextInt();
+      
+      System.out.println("Enter integer m");
+      m = k.nextDouble();
+      
+      System.out.println("Enter integer n");
+      n = k.nextDouble();
+      
+      double RATE = 5.75;
+      
+      int result1, result2;
+      double result3, result4;
+      
+      result1 = (int) (Math.pow(a,5))+(int)(5*RATE)-((int)Math.sqrt(a*b));
+      
+      result2 = (int)(Math.pow(a,9))- (int)(5*(Math.pow(c,4))*b)+(int)Math.pow(b,7);
+      
+      result3 = ((5*(Math.pow(m,2))+7)/8)+((25*b%a))/9;
+      
+      result4 = (4*Math.pow(n,5)+(4*(a*c))-((4*b)*Math.sqrt(m)))/9;
+      
+      System.out.println("\n\n");
+      System.out.println("You entered a = "+a+", b = "+b+", c = "+c+","+
+                         "\n\t\t\t\tm = "+m+", and n = "+n+".");
+     
+      System.out.println("\tresult1 is "+result1+"."+
+                         "\n\tresult2 is "+result2+"."+
+                         "\n\tresult3 is "+result3+"."+
+                         "\n\tresult4 is "+result4+".");
+//Part B- Reading Input From Keyboard and Print                         
+       k.nextLine();
+       String fullName, major, event, sport, animal;
+       int year, count1, count2;
+       
+       System.out.println("\n\n");
+       System.out.println("What's your full name?");
+       fullName = k.nextLine();
+       
+       System.out.println("What's your major?");
+       major = k.nextLine();
+       
+       
+       System.out.println("What's your favorite event?");
+       event = k.nextLine();
+       
+       
+       System.out.println("Enter a year:");
+       year = k.nextInt();
+       
+       
+       k.nextLine();
+       System.out.println("Enter a sport:");
+       sport = k.nextLine();
+       
+       
+       System.out.println("Enter count1:");
+       count1 = k.nextInt();
+       
+       
+       System.out.println("Enter count2:");
+       count2 = k.nextInt();
+       
+       
+       k.nextLine();
+       System.out.println("Enter an animal:");
+       animal = k.nextLine();
+       
+       
+       System.out.println("\n\n");
+       System.out.println("Hello, my name is "+fullName+". At \"Hampton University,\" my major is "+
+                          "\n"+major+". I love "+sport+" "+event+", and I have been there "+count1
+                          +" times "+
+                          "over\nthis past "+count2+" years. \\\\=^=//" ); 
+       System.out.println("\tAnd during the last "+sport+" game, I saw "+(count1+count2)+" "+animal+
+                          "s on \nmy way to the "+event+".");    
+
+//Part C - String Manipulation                          
+       int totalSize = (fullName.length()+major.length()+event.length()+sport.length());
+       String upper = (sport.toUpperCase()+" "+event.toUpperCase());
+       String lower = major.toLowerCase();
+       char firstLetter = animal.charAt(0);
+       String sportUpper = sport.toUpperCase();
+       char lastLetter = sportUpper.charAt(sportUpper.length()-1);
+       char midLetter = upper.charAt(upper.length()/2);
+      
+       
+       System.out.println("\n\n");
+       System.out.println("My Name is "+fullName+" and I love "+upper+"."+
+                          "\n\tThere is a total of "+totalSize+" characters in our Strings."+
+                          "\n\tThe lowercase of major is "+lower+"."+
+                          "\n\t\tThe first character of "+animal+" is "+firstLetter+"."+
+                          "\n\t\tThe last character of "+sport+" is "+lastLetter+".");
+                          
+       System.out.println("\t\tThe mid character of "+upper+" is "+midLetter+".");
+
+
+   }
+}
