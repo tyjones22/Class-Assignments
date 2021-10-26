@@ -1,0 +1,107 @@
+/*
+Tyree Jones-Magee
+2282562095
+tyree.jones.magee@gmail.com
+10/26/2021
+I, Tyree Jones-Magee, pledge to follow the Honor code in taking my lab 7
+*/
+import java.util.Scanner;
+public class JonesMageeT_Lab7{
+public static void main (String []args){
+   Scanner k = new Scanner (System.in);
+
+
+   System.out.println("Enter a Score");
+   int myScore = k.nextInt();
+   String message =  evaluateScore (myScore);
+   System.out.println("Your score is "+myScore+". "+message+".");
+   System.out.println("\n\n");
+
+// Part B
+   System.out.println("Enter an integer from 100 to 200:");
+   int score= k.nextInt();
+
+   if ( score<100 || score>200 )
+      System.out.println("Your score of "+score+" is outside of the range.");
+   // else if ((score>=100&&score<=200)&& score>=150)
+   //    System.out.println("Your score of "+score+" is in high range.");
+   // else 
+   //    System.out.println("Your score of "+score+" is in low range.");
+      
+
+    String hOrL=  ((score>=100&&score<=200)&& score>=150)?"Your score of "+score+" is in high range.":"Your score of "+score+" is in low range.";
+    System.out.println(hOrL);
+    System.out.println("\n\n");
+
+
+
+// Part C
+   k.nextLine();
+   System.out.println("Enter name1");
+   String name1= k.nextLine();
+   System.out.println("Enter name2");
+   String name2= k.nextLine();
+
+   if ( name1.compareTo(name2)==0)
+      System.out.println(" Both "+name1+" and "+name2+" are identical");
+   else if (name1.compareTo(name2)<0)
+      System.out.println("Both names are different, and here is the order "+name1+", "+name2+".");
+   else 
+      System.out.println("Both names are different, and here is the order "+name2+", "+name1+".");
+      System.out.println("\n\n");
+
+// Extra Credit
+      System.out.println("Enter name1");
+       name1= k.nextLine();
+   System.out.println("Enter name2");
+       name2= k.nextLine();
+   System.out.println("Enter name3");
+   String name3= k.nextLine();
+
+ 
+   if ((name1.equalsIgnoreCase(name2)||name1.equalsIgnoreCase(name3))|| name2.equalsIgnoreCase(name3))
+      System.out.println("At least 2 of the names are the same.");
+
+   else if ( name1.compareToIgnoreCase(name2)<0&&name2.compareToIgnoreCase(name3)<0)
+      System.out.println(name1+", "+name2+" ,and "+name3);
+
+   else if ( name1.compareToIgnoreCase(name3)<0&&name3.compareToIgnoreCase(name2)<0)
+      System.out.println(name1+", "+name3+" ,and "+name2);
+
+   else if ( name2.compareToIgnoreCase(name1)<0&&name1.compareToIgnoreCase(name3)<0)
+      System.out.println(name2+", "+name1+" ,and "+name3);
+
+   else if ( name3.compareToIgnoreCase(name2)<0&&name2.compareToIgnoreCase(name1)<0)
+      System.out.println(name3+", "+name2+" ,and "+name1);
+
+   else if ( name2.compareToIgnoreCase(name3)<0&&name3.compareToIgnoreCase(name1)<0)
+      System.out.println(name2+", "+name3+" ,and "+name1);
+
+   else if ( name3.compareToIgnoreCase(name1)<0&&name1.compareToIgnoreCase(name2)<0)
+      System.out.println(name3+", "+name1+" ,and "+name2);
+   else System.out.println("uh oh");
+
+
+
+   }
+// evaluateScore method - Part A: 1&2
+public static String evaluateScore (int myScore) {
+      String message;
+
+      if (myScore<60)
+         message="Need to improve myScore.";
+      else if (myScore>=60&& myScore <=69)
+         message="Poor, with room to improve.";
+      else if (myScore>=70&& myScore <=79)
+         message="Just enough, but you can do more.";
+      else if (myScore>=80&& myScore <=89)
+         message="Good job!";
+      else if (myScore>=90&& myScore <=99)
+         message="Excellent!!";
+      else 
+         message="Outstanding!!";
+
+      return message;
+
+   }
+}
