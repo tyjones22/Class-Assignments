@@ -1,0 +1,188 @@
+/*
+Tyree Jones-Magee
+2282562095
+tyree.jones.magee@gmail.com
+11/02/2021
+I, Tyree Jones-Magee, pledge to follow the Honor code in taking my lab 8
+*/
+import java.util.Scanner;
+import java.util.Random;
+public class JonesMageeT_Lab8{
+public static void main (String []args){
+   Scanner k = new Scanner (System.in);
+
+// Part A
+    Random rand = new Random();
+    int ran1 = rand.nextInt(11);
+    System.out.println("A random integer between 0 and 10: "+ran1);
+
+    int ran2 = rand.nextInt(19)+1;
+    System.out.println("A random integer between 1 and 20: "+ran2);
+
+    double ran3 = rand.nextDouble();
+    System.out.println("A random double between 0 and 1: "+ran3);
+
+    int ran4 = rand.nextInt(21)-10;
+    System.out.println("A random integer between -10 and 10: "+ran4);
+
+
+    int dice1= rand.nextInt(6)+1;
+    int dice2= rand.nextInt(6)+1;
+    int sum = dice1+dice2;
+    System.out.println("Dice are "+dice1+" and "+dice2+", with sum= "+sum);
+    System.out.println("\n\n");
+
+//Part B
+
+     int n=3, m=7,y=5,score=75;
+     m= n==y?m+4:m*5;   
+    System.out.println(m);
+
+
+  
+    m= n<y?m-4:m%5;   
+   System.out.println(m);
+
+   String practice = score<73?"You need to practice more":"You have passed";      
+   System.out.println(practice);
+
+// // Part C
+
+System.out.println("\n\n");
+System.out.println("Enter an area code");
+int areaCode= k.nextInt();
+String cityInfo= "null";
+
+switch (areaCode){
+    case 212:
+        cityInfo = "New York City, NY";
+        break;
+
+    case 202:
+        cityInfo = "Washington, DC";
+        break;
+
+    case 213:
+        cityInfo = "Los Angeles, CA";
+        break;
+
+    case 305:
+        cityInfo = "Miami, FL";
+        break;
+
+    case 228:
+        cityInfo = "Gulfport, MS";
+        break;
+
+    default:
+        cityInfo = "No area code found";
+        break;
+   
+    }
+
+    System.out.println("Your phone area code "+areaCode+" is for "+cityInfo+".\n\n");
+
+// Part D
+
+System.out.println("\n\n");
+    k.nextLine();
+    System.out.println("Enter name1");
+    String name1= k.nextLine();
+
+    System.out.println("Enter name2");
+    String name2= k.nextLine();
+
+    System.out.println("Enter name3");
+    String name3= k.nextLine();
+
+
+    if (name1.equals(name2)&&name2.equals(name3))
+        System.out.println("All names: "+name1+", "+name2+", and "+name3+" are identical.");
+
+    else if (name1.equals(name2))
+    System.out.println("Both "+name1+", and "+name2+" are identical.");
+
+    else if (name1.equals(name3))
+    System.out.println("Both "+name1+", and "+name3+" are identical.");
+
+    else if (name2.equals(name3))
+    System.out.println("Both "+name2+", and "+name3+" are identical.");
+
+    else if (name1.compareTo(name2)<0&&name2.compareTo(name3)<0)
+        System.out.println("The names in order: "+name1+", "+name2+", then "+name3+" .");
+
+    else if (name1.compareTo(name3)<0&&name3.compareTo(name2)<0)
+        System.out.println("The names in order: "+name1+", "+name3+", then "+name2+" .");
+
+    else if (name2.compareTo(name1)<0&&name1.compareTo(name3)<0)
+        System.out.println("The names in order: "+name2+", "+name3+", then "+name1+" .");
+
+    else if (name2.compareTo(name3)<0&&name3.compareTo(name1)<0)
+        System.out.println("The names in order: "+name2+", "+name3+", then "+name1+" .");
+
+    else if (name3.compareTo(name2)<0&&name2.compareTo(name1)<0)
+        System.out.println("The names in order: "+name3+", "+name2+", then "+name1+" .");
+
+    else if (name3.compareTo(name1)<0&&name1.compareTo(name2)<0)
+        System.out.println("The names in order: "+name3+", "+name1+", then "+name2+" .");
+    
+    else 
+        System.out.println("uh oh try again");
+
+//Part E
+
+System.out.println("\n\n");
+     System.out.println("Enter a choice from 'A' through 'E' ");
+     String choice1 = k.nextLine();
+     char choice = choice1.charAt(0);
+
+     switch (choice){
+        case 'A':
+            System.out.println("Always do your BEST!");
+        break;
+
+        case 'a':
+            System.out.println("Always do your BEST!");
+        break;
+
+        case 'B':
+            System.out.println("Practice makes perfect.");
+        break;
+
+        case 'b':
+            System.out.println("Practice makes perfect.");
+        break;
+
+        case 'C':
+            System.out.println("Never stop learning.");
+        break;
+
+        case 'c':
+            System.out.println("Never stop learning.");
+        break;
+
+        case 'D':
+            System.out.println("The more i read, the more I acquire.");
+        break;
+
+        case 'd':
+            System.out.println("The more i read, the more I acquire.");
+        break;
+
+        case 'E':
+            System.out.println("Nothing will work unless you do.");
+        break;
+
+        case 'e':
+            System.out.println("Nothing will work unless you do.");
+        break;
+
+        default:
+            System.out.println("No quote for you today.");
+            }
+    
+
+
+
+    }
+}
