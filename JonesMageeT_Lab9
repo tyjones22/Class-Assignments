@@ -1,0 +1,325 @@
+/*
+Tyree Jones-Magee
+2282562095
+tyree.jones.magee@gmail.com
+11/9/2021
+I, Tyree Jones-Magee, pledge to follow the Honor code in taking my lab 9
+*/
+import java.util.*;
+public class JonesMageeT_Lab9{
+public static void main (String []args){
+   Scanner k = new Scanner (System.in);
+   Random rand = new Random();
+
+// Part A
+
+    int score;
+
+    System.out.println("Enter a score:");
+        score= k.nextInt();
+    if ( score >100 || score <0)
+        System.out.println("You entered the  score of "+score+" and it is not in range of 0 and 100.");
+    else if ( score <60)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade F .");
+    else if ( score >=60&& score <=63)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade D- .");
+    else if ( score >=64&& score <=67)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade D .");
+    else if ( score >=68&& score <=69)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade D+ .");
+    else if ( score >=70&& score <=73)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade C- .");
+    else if ( score >=74&& score <=77)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade C .");
+    else if ( score >=78&& score <=79)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade C+ .");
+    else if ( score >=80&& score <=83)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade B- .");
+    else if ( score >=84&& score <=87)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade B .");
+    else if ( score >=88&& score <=89)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade B+ .");
+    else if ( score >=90&& score <=93)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade A- .");
+    else if ( score >=94&& score <=97)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade A .");
+    else if ( score >=98&& score <=100)
+        System.out.println("You entered the  score of "+score+" and earned a letter grade A+ .");
+    
+// Part B
+
+    System.out.println("\n\n");
+
+    int dice1 = rand.nextInt(6)+1, 
+        dice2 = rand.nextInt(6)+1,
+        dice3 = rand.nextInt(6)+1,
+        dice4 = rand.nextInt(6)+1,
+        sum = dice1 +dice2 +dice3+dice4;
+
+    System.out.println("Dice are "+dice1+", "+dice2+", "+dice3+", and "+dice4+" with sum = "+sum+" .");
+
+    if ( sum>=18)
+        System.out.println("You got a high roll.");
+    else if ( sum>=10&&sum<=17)
+        System.out.println("You got a medium roll.");
+    else if ( sum<=10)
+        System.out.println("You got a low roll, try again; better luck next time");
+
+// Part C
+
+    k.nextLine();
+    System.out.println("\n\n");
+
+    System.out.println("Enter fruit 1:");
+        String fruit1 = k.nextLine();
+        System.out.println("\n");
+    System.out.println("Enter fruit 2:");
+        String fruit2 = k.nextLine();
+        System.out.println("\n");
+    System.out.println("Enter fruit 3:");
+        String fruit3 = k.nextLine();
+        System.out.println("\n");
+
+
+
+    if (fruit1.compareToIgnoreCase(fruit2)<0&&fruit2.compareToIgnoreCase(fruit3)<0)
+        System.out.println("The names in order: "+fruit1+", "+fruit2+", then "+fruit3+" .");
+
+    else if (fruit1.compareToIgnoreCase(fruit3)<0&&fruit3.compareToIgnoreCase(fruit2)<0)
+        System.out.println("The names in order: "+fruit1+", "+fruit3+", then "+fruit2+" .");
+
+    else if (fruit2.compareToIgnoreCase(fruit1)<0&&fruit1.compareToIgnoreCase(fruit3)<0)
+        System.out.println("The names in order: "+fruit2+", "+fruit3+", then "+fruit1+" .");
+
+    else if (fruit2.compareToIgnoreCase(fruit3)<0&&fruit3.compareToIgnoreCase(fruit1)<0)
+        System.out.println("The names in order: "+fruit2+", "+fruit3+", then "+fruit1+" .");
+
+    else if (fruit3.compareToIgnoreCase(fruit2)<0&&fruit2.compareToIgnoreCase(fruit1)<0)
+        System.out.println("The names in order: "+fruit3+", "+fruit2+", then "+fruit1+" .");
+
+    else if (fruit3.compareToIgnoreCase(fruit1)<0&&fruit1.compareToIgnoreCase(fruit2)<0)
+        System.out.println("The names in order: "+fruit3+", "+fruit1+", then "+fruit2+" .");
+    
+    else 
+        System.out.println("uh oh try again");
+
+// Part D
+
+     System.out.println("\n\n");
+
+    double discountRate;
+
+     System.out.println("Are you a recent graduate?"+
+        "\n'Y' for yes"+
+        "\n'N' for No");
+        String gradStatus= k.nextLine();
+        char recentGrad = gradStatus.charAt(0);
+    System.out.println("What is your salary?");
+        double salary = k.nextDouble();
+     System.out.println(" How many years of experience do you have?");
+        int yearsExp = k.nextInt();
+
+    if (((recentGrad == 'N'||recentGrad=='n')&&(yearsExp<=6&&yearsExp>3))&&salary>=50000)
+        discountRate = 25;
+    else if (((recentGrad == 'N'||recentGrad=='n')&&yearsExp>=3)&&salary>=50000)
+        discountRate = 25;
+    else if ((recentGrad == 'N'||recentGrad=='n')&&salary<50000)
+        discountRate = 15;
+    else if (((recentGrad == 'Y'||recentGrad=='y')&&(yearsExp<=5&&yearsExp>2))&&salary>=50000)
+        discountRate = 20;
+    else if (((recentGrad == 'Y'||recentGrad=='y')&&yearsExp>=2)&&salary>=50000)
+        discountRate = 15;
+    else if ((recentGrad == 'Y'||recentGrad=='y')&&salary<50000)
+        discountRate = 10;
+    else 
+        discountRate = 0;
+
+     System.out.println("Based on your information:\n"+
+        "\tsalary = "+salary+"\n"+
+        "\trecent graduate = "+recentGrad+"\n"+
+        "\tyears of experience = "+yearsExp+"\n"+
+        "You will recieve "+discountRate+"%.");
+//Part D
+
+    k.nextLine();
+    System.out.println("\n\n");
+
+    System.out.println(" What is your zodiac sign?");
+      String zodiac=  k.nextLine();
+
+    switch (zodiac){
+        case "Leo":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"An excellent family vibe shines on your day to remain cheerful and happy to experience the joy.\"");
+            break;
+
+        case "leo":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"An excellent family vibe shines on your day to remain cheerful and happy to experience the joy.\"");
+            break;
+
+        case "Virgo":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"It seems like everything is going to go your way on this beautiful day all through the day \".");
+            break;
+
+        case "virgo":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"It seems like everything is going to go your way on this beautiful day all through the day \".");
+            break;
+
+        case "Libra":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            " \"The only thing that you have to keep in your mind while stepping into the day is to be watchful at your workplace \".");
+            break;
+
+        case "libra":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            " \"The only thing that you have to keep in your mind while stepping into the day is to be watchful at your workplace \".");
+            break;
+
+        case "Scorpio":
+            System.out.println("Your "+zodiac+"'s horoscope is"+
+            "\"Most of you might experience a casual day without any major twists and turns \".");
+            break;
+
+        case "scorpio":
+            System.out.println("Your "+zodiac+"'s horoscope is"+
+            "\"Most of you might experience a casual day without any major twists and turns \".");
+            break;
+
+        case "Sagittarius":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"A day wherein you may be full of life, making a good amount of money and gathering assets!\".");
+            break;
+
+        case "sagittarius":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"A day wherein you may be full of life, making a good amount of money and gathering assets!\".");
+            break;
+
+        case "Capricorn":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"You are on your lucky side with your health and professional front, but you may face adversities on your property and family fronts\".");
+            break;
+
+        case "capricorn":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"You are on your lucky side with your health and professional front, but you may face adversities on your property and family fronts\".");
+            break;
+
+        case "Aquarius":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Aquarians are going to have an amazing day except on the professional side\".");
+            break;
+
+        case "aquarius":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Aquarians are going to have an amazing day except on the professional side\".");
+            break;
+
+        case "Pisces":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Today is going to be a good day, although it may not bring huge surprises\".");
+            break;
+
+        case "pisces":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Today is going to be a good day, although it may not bring huge surprises\".");
+            break;
+
+        case "Aries":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"A pretty good day is waiting for you to be experienced\".");
+            break;
+
+        case "aries":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"A pretty good day is waiting for you to be experienced\".");
+            break;
+
+        case "Taurus":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Say yes to new beginnings. Possibilities are endless\".");
+            break;
+
+        case "taurus":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Say yes to new beginnings. Possibilities are endless\".");
+            break;
+
+        case "Gemini":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Today you might have a lot of bittersweet experiences\".");
+            break;
+
+        case "gemini":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Today you might have a lot of bittersweet experiences\".");
+            break;
+
+        case "Cancer":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Cancer, it’s going to be a sweet day to you all\".");
+            break;
+
+        case "cancer":
+            System.out.println("Your "+zodiac+"'s horoscope is "+
+            "\"Cancer, it’s going to be a sweet day to you all\".");
+            break;
+
+        default:
+            System.out.println("Zodiac "+zodiac+"is invalid");
+    }
+
+// Bonus 
+// Part C
+
+
+    System.out.println("\n\n");
+
+    System.out.println("Enter name 1:");
+        String name1 = k.nextLine();
+        System.out.println("\n");
+    System.out.println("Enter name 2:");
+        String name2 = k.nextLine();
+        System.out.println("\n");
+    System.out.println("Enter name 3:");
+        String name3 = k.nextLine();
+        System.out.println("\n");
+    System.out.println("Enter name 4:");
+        String name4 = k.nextLine();
+        System.out.println("\n");
+
+
+
+
+// if (name1.compareToIgnoreCase(name2)<0&&name2.compareToIgnoreCase(name3)<0)
+//     System.out.println("The names in order: "+name1+", "+name2+", then "+name3+" .");
+
+// else if (name1.compareToIgnoreCase(name3)<0&&name3.compareToIgnoreCase(name2)<0)
+//     System.out.println("The names in order: "+name1+", "+name3+", then "+name2+" .");
+
+// else if (name2.compareToIgnoreCase(name1)<0&&name1.compareToIgnoreCase(name3)<0)
+//     System.out.println("The names in order: "+name2+", "+name3+", then "+name1+" .");
+
+// else if (name2.compareToIgnoreCase(name3)<0&&name3.compareToIgnoreCase(name1)<0)
+//     System.out.println("The names in order: "+name2+", "+name3+", then "+name1+" .");
+
+// else if (name3.compareToIgnoreCase(name2)<0&&name2.compareToIgnoreCase(name1)<0)
+//     System.out.println("The names in order: "+name3+", "+name2+", then "+name1+" .");
+
+// else if (name3.compareToIgnoreCase(name1)<0&&name1.compareToIgnoreCase(name2)<0)
+//     System.out.println("The names in order: "+name3+", "+name1+", then "+name2+" .");
+
+// else 
+//     System.out.println("uh oh try again");
+
+    String[] names = {name1, name2, name3, name4};
+    Arrays.sort(names);
+    System.out.println("Names in order : "+
+                        names[0]+", "+names[1]+", "+names[2]+", and "+names[3]+".");
+
+
+    }
+}
