@@ -1,0 +1,88 @@
+/*
+
+System.out.println("");
+
+Tyree Jones-Magee
+2282562095
+tyree.jones.magee@gmail.com
+11/16/2021
+I, Tyree Jones-Magee, pledge to follow the Honor code in taking my lab 10
+*/
+import java.util.*;
+public class JonesMageeT_Lab10{
+public static void main (String []args){
+   Scanner k = new Scanner (System.in);
+   Random rand = new Random();
+
+// Part A
+
+    int myNumber = 8;
+
+    System.out.println("Guess what my favorite number is (0-9):");
+        int guessNum = k.nextInt();
+
+    while ( guessNum != myNumber){
+        System.out.println("\n");
+        System.out.println("Try Again");
+        System.out.println("Enter an int and guess my favorite number");
+        guessNum = k.nextInt();
+     }
+     System.out.println("\n");
+     System.out.println("Good Job!");
+
+//Part B
+
+
+    System.out.println("\n\n");
+     int dice1, dice2, sum;
+
+    do {
+     dice1= rand.nextInt(6)+1;
+     dice2 = rand.nextInt(6)+1;
+     sum = dice1+dice2;
+     System.out.println("Dice are "+dice1+" "+dice2+" (sum = "+sum+")");
+    } while ( sum !=10);
+
+    System.out.println("Ten Rolled");
+
+//Part C
+    
+
+    System.out.println("\n\n");
+    System.out.println("Enter a number:");
+    int limit = k.nextInt();
+    int i = 0;
+  
+
+
+    for ( i = 0; i<=limit; i++){
+    int square = (int)Math.pow(i,2);
+    int cube = (int)Math.pow(i,3);
+    double root = Math.sqrt(i);
+    System.out.println("Number   Square   Cube   Square Root");
+    System.out.println(i+"        "+square+"        "+cube+"      "+root);
+        }
+
+
+// Part D
+
+    System.out.println("\n\n");
+    System.out.println("Enter a number of days:");
+    int days = k.nextInt();
+    double sales= 0, total = 0;
+
+        for ( int j = 1; j<=days;j++){
+            System.out.println("Enter the amount of sales for Day "+j+":");
+            sales = k.nextDouble();
+            total = total +sales;
+        }
+
+        double avg = total/days;
+        System.out.println("The result of "+days+" sales you entered:"+
+                           "\n\tTotal is $"+total+"."+
+                           "\n\tAverage is $"+avg+".");
+        System.out.println("\n");
+
+
+    }
+}
