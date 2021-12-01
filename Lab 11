@@ -1,0 +1,27 @@
+/*
+
+System.out.println("");
+
+Tyree Jones-Magee
+2282562095
+tyree.jones.magee@gmail.com
+11/16/2021
+I, Tyree Jones-Magee, pledge to follow the Honor code in taking my lab 11
+*/
+import java.util.*;
+public class JonesMageeT_Lab11{
+public static void main (String []args){
+   Scanner k = new Scanner (System.in);
+   Random rand = new Random();
+
+// Part A
+    
+    System.out.println("Enter an Integr");
+    int num = k.nextInt();
+    if ( num !=-1){
+      if ( num%2 ==0 || num == 2){
+         System.out.println(x);
+        }
+      }
+    }
+}
